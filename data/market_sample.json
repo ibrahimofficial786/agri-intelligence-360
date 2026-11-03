@@ -1,0 +1,9 @@
+{
+  "source": "SAMPLE DATA (generated for demonstration; not real market prices)",
+  "crops": {
+    "Groundnut": {"base": 6200, "markets": {"Kurnool": 0, "Adoni": 120, "Nandyal": -80, "Yemmiganur": 60}},
+    "Cotton": {"base": 7100, "markets": {"Adoni": 180, "Kurnool": 0, "Yemmiganur": -60}},
+    "Paddy": {"base": 2250, "markets": {"Kurnool": 0, "Nandyal": 40, "Nandikotkur": -30}},
+    "Red gram": {"base": 7600, "markets": {"Kurnool": 0, "Adoni": 90, "Nandyal": -50}}
+  }
+}

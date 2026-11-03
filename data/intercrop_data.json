@@ -1,0 +1,37 @@
+{
+  "_note": "Crop trait values are approximate, general agronomic knowledge compiled for this project. They are NOT yet verified against ANGRAU/ICAR recommendations and are NOT live data. Have an agronomist review them, then edit this file; no code change is needed. Row ratios and seed rates are deliberately not included.",
+  "version": "0.1-unverified",
+  "weights": {"nitrogen": 15, "canopy": 15, "duration": 15, "root": 10, "water_pair": 10, "water_supply": 10, "soil": 10, "temperature": 10, "ph": 5},
+  "thresholds": {"highly_suitable": 85, "suitable": 70, "marginal": 55},
+  "references_to_verify": [
+    {"name": "ANGRAU (Acharya N.G. Ranga Agricultural University) package of practices and KVK advisories", "url": "https://angrau.ac.in"},
+    {"name": "ICAR / ICAR-CRIDA dryland and intercropping recommendations", "url": "https://icar.org.in"},
+    {"name": "TNAU Agritech Portal crop production guides", "url": "https://agritech.tnau.ac.in"}
+  ],
+  "known_systems_note": "Combinations commonly reported in Indian intercropping literature. Listed for context only. They do not change the score. Verify variety, ratio and sowing dates locally.",
+  "known_systems": [
+    ["groundnut", "red_gram"], ["cotton", "green_gram"], ["cotton", "black_gram"], ["maize", "red_gram"],
+    ["maize", "green_gram"], ["maize", "black_gram"], ["sugarcane", "green_gram"], ["sugarcane", "black_gram"],
+    ["soybean", "red_gram"], ["sorghum", "red_gram"], ["red_gram", "green_gram"], ["red_gram", "black_gram"]
+  ],
+  "regional_overrides": [],
+  "regional_overrides_note": "Add verified region-specific entries here: {\"region\": \"Kurnool\", \"primary\": \"groundnut\", \"companion\": \"red_gram\", \"note\": \"...\", \"source\": \"...\"}. They appear on matching results with their source.",
+  "crops": {
+    "paddy": {"name": "Paddy", "name_te": "వరి", "family": "Poaceae", "group": "cereal", "legume": false, "canopy": "medium", "root": "shallow", "water": "high", "duration": [110, 150], "seasons": ["kharif", "rabi"], "soils": ["Clay loam", "Alluvial", "Black soil"], "ph": [5.5, 7.5], "temp": [20, 35]},
+    "maize": {"name": "Maize", "name_te": "మొక్కజొన్న", "family": "Poaceae", "group": "cereal", "legume": false, "canopy": "tall", "root": "medium", "water": "medium", "duration": [90, 120], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Red soil", "Sandy loam", "Alluvial", "Black soil"], "ph": [5.8, 7.5], "temp": [18, 32]},
+    "sorghum": {"name": "Sorghum (Jowar)", "name_te": "జొన్న", "family": "Poaceae", "group": "cereal", "legume": false, "canopy": "tall", "root": "deep", "water": "low", "duration": [100, 120], "seasons": ["kharif", "rabi"], "soils": ["Black soil", "Red soil", "Sandy loam"], "ph": [6.0, 8.5], "temp": [25, 32]},
+    "groundnut": {"name": "Groundnut", "name_te": "వేరుశనగ", "family": "Fabaceae", "group": "oilseed", "legume": true, "canopy": "low", "root": "medium", "water": "medium", "duration": [100, 130], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Red soil", "Sandy loam"], "ph": [6.0, 7.0], "temp": [22, 30]},
+    "cotton": {"name": "Cotton", "name_te": "పత్తి", "family": "Malvaceae", "group": "fibre", "legume": false, "canopy": "tall", "root": "deep", "water": "medium", "duration": [150, 180], "seasons": ["kharif"], "soils": ["Black soil", "Red soil"], "ph": [6.0, 8.5], "temp": [21, 35]},
+    "chilli": {"name": "Chilli", "name_te": "మిరప", "family": "Solanaceae", "group": "vegetable", "legume": false, "canopy": "medium", "root": "medium", "water": "medium", "duration": [150, 210], "seasons": ["kharif", "rabi"], "soils": ["Black soil", "Red soil", "Sandy loam"], "ph": [6.0, 7.5], "temp": [20, 30]},
+    "tomato": {"name": "Tomato", "name_te": "టమాటా", "family": "Solanaceae", "group": "vegetable", "legume": false, "canopy": "medium", "root": "medium", "water": "medium", "duration": [100, 140], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Red soil", "Sandy loam", "Alluvial"], "ph": [6.0, 7.0], "temp": [18, 27]},
+    "onion": {"name": "Onion", "name_te": "ఉల్లి", "family": "Amaryllidaceae", "group": "vegetable", "legume": false, "canopy": "low", "root": "shallow", "water": "medium", "duration": [100, 150], "seasons": ["kharif", "rabi"], "soils": ["Sandy loam", "Alluvial", "Red soil"], "ph": [6.0, 7.5], "temp": [13, 28]},
+    "coriander": {"name": "Coriander", "name_te": "కొత్తిమీర", "family": "Apiaceae", "group": "vegetable", "legume": false, "canopy": "low", "root": "shallow", "water": "low", "duration": [45, 110], "seasons": ["kharif", "rabi"], "soils": ["Black soil", "Sandy loam", "Red soil"], "ph": [6.0, 8.0], "temp": [17, 27]},
+    "red_gram": {"name": "Red gram (Pigeon pea)", "name_te": "కంది", "family": "Fabaceae", "group": "pulse", "legume": true, "canopy": "tall", "root": "deep", "water": "low", "duration": [150, 200], "seasons": ["kharif"], "soils": ["Red soil", "Black soil", "Sandy loam"], "ph": [6.0, 7.5], "temp": [20, 32]},
+    "black_gram": {"name": "Black gram (Minumulu)", "name_te": "మినుములు", "family": "Fabaceae", "group": "pulse", "legume": true, "canopy": "low", "root": "shallow", "water": "low", "duration": [65, 90], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Black soil", "Red soil", "Sandy loam", "Alluvial"], "ph": [6.0, 7.5], "temp": [25, 35]},
+    "green_gram": {"name": "Green gram (Pesalu)", "name_te": "పెసలు", "family": "Fabaceae", "group": "pulse", "legume": true, "canopy": "low", "root": "shallow", "water": "low", "duration": [60, 80], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Black soil", "Red soil", "Sandy loam", "Alluvial"], "ph": [6.0, 7.5], "temp": [25, 35]},
+    "bengal_gram": {"name": "Bengal gram (Chickpea)", "name_te": "శనగ", "family": "Fabaceae", "group": "pulse", "legume": true, "canopy": "medium", "root": "deep", "water": "low", "duration": [90, 120], "seasons": ["rabi"], "soils": ["Black soil", "Red soil", "Sandy loam"], "ph": [6.0, 8.0], "temp": [15, 25]},
+    "soybean": {"name": "Soybean", "name_te": "సోయాబీన్", "family": "Fabaceae", "group": "oilseed", "legume": true, "canopy": "medium", "root": "medium", "water": "medium", "duration": [90, 110], "seasons": ["kharif"], "soils": ["Black soil", "Red soil"], "ph": [6.0, 7.5], "temp": [20, 30]},
+    "sunflower": {"name": "Sunflower", "name_te": "పొద్దుతిరుగుడు", "family": "Asteraceae", "group": "oilseed", "legume": false, "canopy": "tall", "root": "deep", "water": "low", "duration": [85, 110], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Black soil", "Red soil", "Sandy loam"], "ph": [6.5, 8.0], "temp": [20, 28]},
+    "sugarcane": {"name": "Sugarcane", "name_te": "చెరకు", "family": "Poaceae", "group": "sugar", "legume": false, "canopy": "tall", "root": "deep", "water": "high", "duration": [300, 365], "seasons": ["kharif", "rabi", "zaid"], "soils": ["Black soil", "Alluvial", "Clay loam", "Red soil"], "ph": [6.0, 8.0], "temp": [20, 35]}
+  }
+}
